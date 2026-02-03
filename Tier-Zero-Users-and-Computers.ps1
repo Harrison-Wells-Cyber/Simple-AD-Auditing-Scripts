@@ -134,7 +134,6 @@ foreach ($groupName in $Tier0Groups) {
   try {
     $group = Get-ADGroup -Identity $groupName -ErrorAction Stop
   } catch {
-    # Skip missing/unresolvable groups silently (original behavior)
     continue
   }
 
